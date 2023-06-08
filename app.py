@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 # Create a Flask app
 app = Flask(__name__)
-CORS(app, origins=['http://127.0.0.1:5173', 'https://chainlinkapi-production.up.railway.app', 'https://chainlink-audio.onrender.com'])
+CORS(app)
 
 @app.route("/<string:char_param>/<int:param>", methods=["GET"])
 def predict(char_param, param):
